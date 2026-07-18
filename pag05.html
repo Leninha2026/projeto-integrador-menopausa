@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contato</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    color:#333;
+}
+
+header{
+    background:#5b8c51;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    background:#79a96b;
+    text-align:center;
+    padding:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 0 8px rgba(0,0,0,0.2);
+}
+
+h2{
+    color:#5b8c51;
+    text-align:center;
+}
+
+p{
+    text-align:center;
+}
+
+label{
+    display:block;
+    margin-top:18px;
+    font-weight:bold;
+}
+
+input, textarea{
+
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+    font-size:16px;
+
+}
+
+textarea{
+
+    height:120px;
+    resize:none;
+
+}
+
+button{
+
+    width:100%;
+    margin-top:25px;
+    padding:12px;
+    background:#5b8c51;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    background:#47703f;
+
+}
+
+.caixa{
+
+    background:#eef7ea;
+    border-left:5px solid #5b8c51;
+    padding:15px;
+    margin-top:30px;
+
+}
+
+footer{
+
+    background:#5b8c51;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Vida Saudável 45+</h1>
+
+<p>Entre em contato</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">Início</a>
+
+<a href="pag02.html">Alimentação</a>
+
+<a href="pag03.html">Exercícios</a>
+
+<a href="pag04.html">Calcular IMC</a>
+
+<a href="pag05.html">Contato</a>
+
+
+</nav>
+
+<div class="container">
+
+<h2>Fale Conosco</h2>
+
+<p>
+Se você tiver dúvidas ou quiser enviar sugestões, preencha o formulário abaixo.
+</p>
+
+<form>
+
+<label>Nome</label>
+
+<input type="text" placeholder="Digite seu nome">
+
+<label>E-mail</label>
+
+<input type="email" placeholder="Digite seu e-mail">
+
+<label>Assunto</label>
+
+<input type="text" placeholder="Assunto">
+
+<label>Mensagem</label>
+
+<textarea placeholder="Escreva sua mensagem"></textarea>
+
+<button type="button" onclick="enviarMensagem()">
+
+Enviar Mensagem
+
+</button>
+
+</form>
+
+<div class="caixa">
+
+<h3>Informações</h3>
+
+<p>
+
+Este site foi desenvolvido como Projeto Integrador da disciplina de Desenvolvimento Web.
+
+</p>
+
+<p>
+
+Seu objetivo é fornecer informações educativas sobre alimentação saudável, exercícios físicos e cálculo do Índice de Massa Corporal (IMC) para mulheres acima de 45 anos durante a menopausa.
+
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+Projeto Integrador - Desenvolvimento Web<br>
+
+Faculdade - 2026
+
+</footer>
+
+<script>
+
+function enviarMensagem(){
+
+alert("Mensagem enviada com sucesso!");
+
+}
+
+</script>
+
+</body>
+
+</html>

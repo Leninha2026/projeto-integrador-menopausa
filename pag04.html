@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora IMC</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+}
+
+header{
+    background:#5b8c51;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    background:#79a96b;
+    padding:12px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 0 8px rgba(0,0,0,0.2);
+}
+
+h2{
+    color:#5b8c51;
+    text-align:center;
+}
+
+label{
+    display:block;
+    margin-top:20px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+button{
+    margin-top:25px;
+    width:100%;
+    padding:12px;
+    font-size:17px;
+    background:#5b8c51;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#47703f;
+}
+
+#resultado{
+    margin-top:30px;
+    background:#eef7ea;
+    padding:20px;
+    border-left:5px solid #5b8c51;
+    font-size:18px;
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:30px;
+
+}
+
+table, th, td{
+
+    border:1px solid #ccc;
+
+}
+
+th{
+
+    background:#5b8c51;
+    color:white;
+    padding:10px;
+
+}
+
+td{
+
+    padding:10px;
+    text-align:center;
+
+}
+
+footer{
+
+    background:#5b8c51;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Vida Saudável 45+</h1>
+
+<p>Calculadora de Índice de Massa Corporal</p>
+
+</header>
+
+<nav>
+
+
+<a href="index.html">Início</a>
+
+<a href="pag02.html">Alimentação</a>
+
+<a href="pag03.html">Exercícios</a>
+
+<a href="pag04.html">Calcular IMC</a>
+
+<a href="pag05.html">Contato</a>
+
+
+</nav>
+
+<div class="container">
+
+<h2>Calculadora de IMC</h2>
+
+<p>
+
+Digite seu peso e sua altura para calcular seu Índice de Massa Corporal (IMC).
+
+</p>
+
+<label>Peso (kg)</label>
+
+<input type="number" id="peso" placeholder="Ex: 72">
+
+<label>Altura (m)</label>
+
+<input type="number" step="0.01" id="altura" placeholder="Ex: 1.65">
+
+<button onclick="calcularIMC()">
+
+Calcular IMC
+
+</button>
+
+<div id="resultado">
+
+O resultado aparecerá aqui.
+
+</div>
+
+<table>
+
+<tr>
+
+<th>IMC</th>
+
+<th>Classificação</th>
+
+</tr>
+
+<tr>
+
+<td>Menor que 18,5</td>
+
+<td>Magreza</td>
+
+</tr>
+
+<tr>
+
+<td>18,5 até 24,9</td>
+
+<td>Peso normal</td>
+
+</tr>
+
+<tr>
+
+<td>25 até 29,9</td>
+
+<td>Sobrepeso</td>
+
+</tr>
+
+<tr>
+
+<td>30 até 34,9</td>
+
+<td>Obesidade Grau I</td>
+
+</tr>
+
+<tr>
+
+<td>35 até 39,9</td>
+
+<td>Obesidade Grau II</td>
+
+</tr>
+
+<tr>
+
+<td>40 ou mais</td>
+
+<td>Obesidade Grau III</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+
+Projeto Integrador - Desenvolvimento Web
+
+</footer>
+
+<script>
+
+function calcularIMC(){
+
+let peso = parseFloat(document.getElementById("peso").value);
+
+let altura = parseFloat(document.getElementById("altura").value);
+
+if(isNaN(peso) || isNaN(altura) || altura<=0){
+
+document.getElementById("resultado").innerHTML="Preencha todos os campos corretamente.";
+
+return;
+
+}
+
+let imc = peso/(altura*altura);
+
+let classificacao="";
+
+if(imc<18.5){
+
+classificacao="Magreza";
+
+}
+
+else if(imc<25){
+
+classificacao="Peso Normal";
+
+}
+
+else if(imc<30){
+
+classificacao="Sobrepeso";
+
+}
+
+else if(imc<35){
+
+classificacao="Obesidade Grau I";
+
+}
+
+else if(imc<40){
+
+classificacao="Obesidade Grau II";
+
+}
+
+else{
+
+classificacao="Obesidade Grau III";
+
+}
+
+document.getElementById("resultado").innerHTML=
+
+"<strong>Seu IMC é: </strong>"+imc.toFixed(1)+
+"<br><br><strong>Classificação:</strong> "+classificacao;
+
+}
+
+</script>
+
+</body>
+
+</html>
