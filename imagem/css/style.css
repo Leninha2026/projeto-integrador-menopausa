@@ -1,0 +1,108 @@
+/* ESTILO GERAL */
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    color:#333;
+}
+
+header{
+    background:#5b8c51;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    background:#79a96b;
+    text-align:center;
+    padding:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:30px auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 8px rgba(0,0,0,0.15);
+}
+
+.banner{
+    display:block;
+    width:80%;
+    max-width:700px;
+    height:auto;
+    margin:20px auto;
+    border-radius:10px;
+}
+
+h2{
+    color:#5b8c51;
+}
+
+.botao{
+    display:inline-block;
+    background:#5b8c51;
+    color:white;
+    padding:12px 22px;
+    text-decoration:none;
+    border-radius:6px;
+    margin-top:15px;
+}
+
+.botao:hover{
+    background:#456f3d;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+button{
+    background:#5b8c51;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#456f3d;
+}
+
+footer{
+    margin-top:40px;
+    background:#5b8c51;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+.exercicio{
+    width: 60%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
